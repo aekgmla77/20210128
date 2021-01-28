@@ -56,7 +56,7 @@ public class BoardDao extends DAO{
 		    	vo.setbGroup(rs.getInt("bgroup"));
 		    	vo.setbStep(rs.getInt("bstep"));
 		    	vo.setbIndent(rs.getInt("bindent"));
-		    	hitCount(vo.getbId()); // 조회수 증가
+		    	hitCount(vo.getbId()); // 議고쉶�닔 利앷�
 			}
 		}catch(SQLException e) {
 			e.printStackTrace();
@@ -125,7 +125,7 @@ public class BoardDao extends DAO{
 		}
 	}
 	
-	private void hitCount(int hit) {  // 조회수 증가 메소드
+	private void hitCount(int hit) {  // 議고쉶�닔 利앷� 硫붿냼�뱶
 		String sql = "UPDATE BOARD SET BHIT=BHIT+1 WHERE BID=?";
 		try {
 			psmt = conn.prepareStatement(sql);

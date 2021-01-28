@@ -11,7 +11,7 @@ public class BoardUpdate implements Command {
 
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response) {
-		// TODO 수정
+		// TODO �닔�젙
 		BoardDao dao = new BoardDao();
 		BoardVo vo = new BoardVo();
 		vo.setbContent(request.getParameter("bContent"));

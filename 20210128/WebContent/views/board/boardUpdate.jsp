@@ -5,26 +5,29 @@
 <head>
 <meta charset="UTF-8">
 <title>게시글 수정</title>
+<script>
+</script>
 </head>
 <body>
 <div align="center">
 	<div><h1>게시글 수정 화면</h1></div>
 	<div>
 	<form id="frm" name="frm" action="boardUpdate.do" method="post">
+	<input type="hidden" id="bId" name="bId" value="${vo.bId }">
 		<table border="1">
 			<tr>
-				<th width="100">작성자</th>
-					<td width="150"><input type="text" id="bName" name="bName" value="${vo.bName }" readonly></td>
+				<th width="70">작성자</th>
+					<td width="70"><input type="text" value="${vo.bName }"></td>
 				<th width="100">작성일자</th>
-					<td width="150"><input type="date" id="bDate" name="bDate" value="${vo.bDate }" readonly></td>	
+					<td width="100">${vo.bDate }</td>	
 			</tr>
 			<tr>
 				<th width="100">제 목</th>
-					<td colspan="3"><input type="text" id="bTitle" name="bTitle" value="${vo.bTitle }" readonly></td>
+					<td colspan="5"><input type="text" id="bTitle" name="bTitle" size="52" value="${vo.bTitle }" readonly></td>
 			</tr>
 			<tr>
 				<th width="100">내 용</th>
-					<td colspan="3"><textarea id="bContent" name="bContent" rows="7" value="${vo.bContent }"></textarea></td>
+					<td colspan="5"><textarea id="bContent" name="bContent" rows="7" cols="55">${vo.bContent }</textarea></td>
 			</tr>	
 		</table>
 		<div><br/>

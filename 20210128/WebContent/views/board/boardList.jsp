@@ -55,7 +55,6 @@ tr.row:hover {
 	</div><br/>
 	<div>
 		<button type="button" onclick="location.href='boardForm.do'">새 글 등록</button>&nbsp;&nbsp;
-		<button type="button" onclick="location.href='boardDelete.do'">삭제</button>
 	</div>
 </div>
 </body>

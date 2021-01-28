@@ -9,16 +9,11 @@
 	function deleteAlert(){
 		var yn = confirm("정말 삭제하시겠습니까?");
 		if(yn) {
-			frm.action.value="boardDelete.do";
+			frm.action="boardDelete.do";
 			frm.submit();
 		}else {
 			
 		}
-	}
-	
-	function editAlert(){
-		frm.action="location.href='boardupForm.do?row='+ ${vo.bId }";
-		frm.submit();
 	}
 </script>
 </head>
@@ -26,7 +21,8 @@
 <div align="center">
 	<div><h1>게시글 상세화면</h1></div>
 	<div>
-	<form id="frm" name="frm" action="boardDelete.do" method="post">
+	<form id="frm" name="frm" method="post">
+	<input type="hidden" id="bId" name="bId" value="${vo.bId }">
 		<table border="1">
 			<%-- <c:if test="${empty list }">
 				<tr>
@@ -53,8 +49,7 @@
 	<div>
 		<button type="button" onclick="location.href='boardList.do'">목록</button>&nbsp;&nbsp;&nbsp;
 		<button type="button" onclick="deleteAlert()">삭제</button>&nbsp;&nbsp;&nbsp;
-		<button type="button" onclick="editAlert()">수정</button>
-		<input type="hidden" id="bId" name="bId" value="${vo.bId }">
+		<button type="button" onclick="location.href='boardupForm.do?row='+${param.bId}">수정</button>
 	</div>
     </form>
     </div>
